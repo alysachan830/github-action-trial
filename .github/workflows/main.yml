@@ -45,6 +45,7 @@ jobs:
         git init
         git config user.name "GitHub Actions"
         git config user.email "noreply@github.com"
+        git config --global http.proxy http://proxyuser:proxypwd@proxy.server.com:8080
         git add .
         git commit -m "update `date +'%Y-%m-%d %H:%M:%S'`";
         git remote add origin https://${{ secrets.DEPLOY_TOKEN }}@$GITHUB_REPO
